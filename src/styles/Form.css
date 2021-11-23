@@ -1,0 +1,121 @@
+.Form__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.Form__header {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0.25em;
+}
+
+.Form__success-flag {
+  position: relative;
+  background: #83c5c044;
+  top: -1em;
+  padding: 0.5em 0.75em 0.5em 1em;
+  width: fit-content;
+  transition: all 750ms ease-in-out;
+}
+
+.Form__success-flag.hidden {
+  top: -5em;
+}
+
+.Form__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Form__form-input--label {
+  position: relative;
+  border-top: 1.3em solid transparent;
+}
+
+.Form__form-input--label .Form__form-input {
+  border: 1px solid #eee;
+  background: #f2f2f2;
+  width: 100%;
+  margin: .25em 0;
+  padding: 0.25em 0.5em;
+  font-size: 1.3em;
+  line-height: 1.5;
+  font-family: var(--ff-sans-serif);
+}
+
+.Form__form-input--label .placeholder {
+  position: absolute;
+  left: 0.75em;
+  bottom: 50%;
+  top: 1.25em;  
+  transform: translateY(-50%);
+  width: calc(100% - 1.5em);  
+  color: #aaa;
+  transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.Form__form-input--label-date {
+  border-top: 0.5em solid transparent;
+}
+
+.placeholder--duedate {
+  padding-left: 0.75em;
+  font-size: 1em;
+  color: #aaa;
+}
+
+.Form__form-input--label .Form__form-input:not(:placeholder-shown) + .placeholder,
+.Form__form-input--label .Form__form-input:focus + .placeholder {
+  top: -.25em;
+  font-size: 1em;
+  color: #222;
+}
+
+.Form__form-input:focus {
+  background: rgba(31, 106, 91, 0.1);
+  outline: 1px solid var(--color-dark);
+}
+
+.Form__form-input:required + .placeholder::after{
+  content: "required";
+  position: absolute;
+  top: 0.35em;
+  right: 0;
+  font-size: 0.7em;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.Form__form-input--btn {
+  margin: 1em 0;
+  padding: 0.75em 0;
+  background: var(--clr-green);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+}
+
+.Form__form-input--btn:focus {
+  outline:2px solid #569E8D;
+}
+
+.Form__form-input--btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+@media screen and (min-width:768px) {
+  .Form__form-input--btn {
+    width: 200px;
+    align-self: flex-end;
+  }
+
+}

@@ -1,0 +1,19 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --ff-sans-serif: 'Manrope', sans-serif;
+  --clr-green: #006d77;
+  --clr-white: #edf6f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-sans-serif);
+  font-size: 16px;
+}

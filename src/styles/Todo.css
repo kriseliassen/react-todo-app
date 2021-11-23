@@ -1,0 +1,145 @@
+.Todo__container {
+  border: 4px solid transparent;
+  background: #83c5c07e;
+}
+
+.Todo__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.Todo__info--text {
+  overflow-wrap: anywhere;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.Todo__info--duedate {
+  margin-top: 0.75em;
+  font-size: 0.9rem;
+}
+
+.Todo__info {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.Todo__info--title::first-letter,
+.Todo__info--details::first-letter {
+  text-transform: uppercase;
+}
+
+.checkbox {
+  font-size: 1.5rem;
+}
+
+.Todo__content--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  position:relative;
+}
+
+.done .Todo__info {
+  opacity: 0.6;
+}
+
+.done .Todo__info--text {
+  text-decoration: line-through;
+  opacity: 0.45;
+}
+
+.done {
+  order: 1;
+  border: 4px solid transparent;
+  background: rgba(119, 136, 153, 0.2)
+}
+
+.done.hidden { 
+  display: none; 
+}
+
+
+.Todo__edit-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1em;
+  gap: 0.5em;
+}
+
+.Todo__edit-form--header {
+  position: absolute;
+  right: 0.75em;
+  top: 0.2em;
+}
+
+.Todo__edit-form--label {
+  opacity: 0.7;
+}
+
+.Todo__edit-form--input {
+  font-size: 1rem;
+  font-family: var(--ff-sans-serif);
+  padding: 0.25em;
+}
+
+.Todo__edit-form--btns {
+  align-self: flex-end;
+  margin-top: 0.5em;
+  display: flex;
+  gap: 1em;
+}
+
+.Todo__edit-form--btn {
+  font-family: var(--ff-sans-serif);
+  padding: 0.75em 1em;
+  width: fit-content;
+  border: none;
+  font-size: 0.75em;
+  letter-spacing: 1.5px;
+}
+
+.Todo__edit-form--btn-update {
+  background: var(--clr-green);
+  color: var(--clr-white);
+}
+
+.Todo__edit-form--btn-cancel {
+  background: #f28482;
+  color: black;
+}
+.checkbox:hover,
+.Todo__edit-form--btn:hover,
+.Todo__content--btn:hover {
+  cursor: pointer;
+}
+
+.Todo__content--btn--edit:hover::before {
+  content: "edit";
+}
+
+.Todo__content--btn--remove:hover::before {
+  content: "remove";
+}
+
+.Todo__content--btn--edit:hover::before,
+.Todo__content--btn--remove:hover::before {
+  position: relative;
+  right: 0.5rem;
+  font-size: 0.6em;
+  text-decoration: none;
+  color: var(--clr-green);
+}
+
+.Todo__edit-form--btn:hover,
+.Todo__content--btn:hover {
+  opacity: 0.7;
+}
