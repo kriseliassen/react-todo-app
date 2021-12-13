@@ -9,7 +9,7 @@ function App() {
       <nav className="App__navbar" data-testid="navbar">
         <p className="App__logo">
           <BsCheck2Circle />
-          Redux to-do
+          to-do
         </p>
       </nav>
       <main className="App__main">
